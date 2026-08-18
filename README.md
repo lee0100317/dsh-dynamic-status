@@ -22,8 +22,7 @@
 ## 安装
 
 ```bash
-git clone git@github.com:lee0100317/dsh-dynamic-status.git ~/dsh-dynamic-status
-dsh plugin --profile web add link:~/dsh-dynamic-status
+dsh plugin --profile web add git+ssh://git@github.com/lee0100317/dsh-dynamic-status.git
 ```
 
 打开 `~/.dsh/profiles/web/package.json`，在 `dsh.profile.bundles` 数组中追加一行：
