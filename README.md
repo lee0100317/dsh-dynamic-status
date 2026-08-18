@@ -16,26 +16,33 @@
 > "I'll be back."
 
 - **207 条**引言，数据来源于 Firaxis 官方 `Vanilla_zh_Hans_CN.xml`
-- 每 **4–6 秒**随机轮换，不重复上一条
+- 每 **6–9 秒**随机轮换，不重复上一条
 - 零配置，安装即用
 
 ## 安装
 
 ```bash
-# 1. clone 到本地
 git clone git@github.com:lee0100317/dsh-dynamic-status.git ~/dsh-dynamic-status
-
-# 2. 编辑 ~/.dsh/profiles/web/package.json，添加依赖：
-#    "dependencies": {
-#      "@lee0100317/dsh-dynamic-status": "link:~/dsh-dynamic-status"
-#    }
-
-# 3. 在 dsh.profile.bundles 数组中追加：
-#    "@lee0100317/dsh-dynamic-status"
-
-# 4. 安装并重启 DSH
-cd ~/.dsh/profiles/web && pnpm install
 ```
+
+然后在 `~/.dsh/profiles/web/package.json` 中添加：
+
+```json
+{
+  "dependencies": {
+    "@lee0100317/dsh-dynamic-status": "link:~/dsh-dynamic-status"
+  },
+  "dsh": {
+    "profile": {
+      "bundles": [
+        "@lee0100317/dsh-dynamic-status"
+      ]
+    }
+  }
+}
+```
+
+最后 `cd ~/.dsh/profiles/web && pnpm install`，重启 DSH 即可。
 
 ## 原理
 
