@@ -24,13 +24,7 @@
 dsh plugin --profile web add git+ssh://git@github.com/lee0100317/dsh-dynamic-status.git
 ```
 
-打开 `~/.dsh/profiles/web/package.json`，在 `dsh.profile.bundles` 数组中追加一行：
-
-```json
-"@lee0100317/dsh-dynamic-status"
-```
-
-重启 DSH 即可。
+重启 DSH 即可。`cordis.patch.yml` 会自动注册到 bundle 层，无需手动编辑 bundles 数组。
 
 ## 原理
 
