@@ -1,0 +1,4 @@
+# dsh-dynamic-status bundle patch: inserts its plugin row into the web plugin roster.
+- insert:
+    - id: dynamic-status
+      name: '@lee0100317/dsh-dynamic-status'
