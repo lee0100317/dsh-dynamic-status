@@ -23,26 +23,16 @@
 
 ```bash
 git clone git@github.com:lee0100317/dsh-dynamic-status.git ~/dsh-dynamic-status
+dsh plugin --profile web add link:~/dsh-dynamic-status
 ```
 
-然后在 `~/.dsh/profiles/web/package.json` 中添加：
+打开 `~/.dsh/profiles/web/package.json`，在 `dsh.profile.bundles` 数组中追加一行：
 
 ```json
-{
-  "dependencies": {
-    "@lee0100317/dsh-dynamic-status": "link:~/dsh-dynamic-status"
-  },
-  "dsh": {
-    "profile": {
-      "bundles": [
-        "@lee0100317/dsh-dynamic-status"
-      ]
-    }
-  }
-}
+"@lee0100317/dsh-dynamic-status"
 ```
 
-最后 `cd ~/.dsh/profiles/web && pnpm install`，重启 DSH 即可。
+重启 DSH 即可。
 
 ## 原理
 
