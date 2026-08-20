@@ -1,6 +1,6 @@
 {
   "name": "@lee0100317/dsh-dynamic-status",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "动态替换 DSH 思考状态文字为《文明 6》科技/人文引言，随机轮换，妙趣横生。 · Replace the 'Deep diving...' status with random Civ 6 tech/civic quotes, cycling dynamically like Codex.",
   "type": "module",
   "main": "lib/index.js",
